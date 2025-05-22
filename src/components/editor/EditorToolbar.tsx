@@ -1,12 +1,10 @@
-// src/components/editor/EditorToolbar.tsx
 "use client";
 
-import type React from 'react';
-import { Bold, Italic } from 'lucide-react';
-import { Button } from '@/components/ui/button'; // Using shadcn button for toolbar
-
+import type React from "react";
+import { Bold, Italic } from "lucide-react";
+import { Button } from "@/components/ui/button";
 interface EditorToolbarProps {
-  onCommand: (command: 'bold' | 'italic') => void;
+  onCommand: (command: "bold" | "italic") => void;
 }
 
 export const EditorToolbar: React.FC<EditorToolbarProps> = ({ onCommand }) => {
@@ -15,7 +13,7 @@ export const EditorToolbar: React.FC<EditorToolbarProps> = ({ onCommand }) => {
       <Button
         variant="ghost"
         size="sm"
-        onClick={() => onCommand('bold')}
+        onClick={() => onCommand("bold")}
         aria-label="Bold"
         className="p-2 h-auto"
       >
@@ -24,7 +22,7 @@ export const EditorToolbar: React.FC<EditorToolbarProps> = ({ onCommand }) => {
       <Button
         variant="ghost"
         size="sm"
-        onClick={() => onCommand('italic')}
+        onClick={() => onCommand("italic")}
         aria-label="Italic"
         className="p-2 h-auto"
       >
